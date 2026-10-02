@@ -1,0 +1,29 @@
+{
+  "statusCode": 200,
+  "data": [
+    {
+      "subscriber_id": "MP10001",
+      "name": "Thabo Mthembu",
+      "msisdn": "0820001001",
+      "id_number": "9001015009087",
+      "plan": "Prepaid",
+      "data_balance": "1.5 GB"
+    },
+    {
+      "subscriber_id": "MP10002",
+      "name": "Nomsa Dlamini",
+      "msisdn": "0830002002",
+      "id_number": "9202025009081",
+      "plan": "Postpaid",
+      "data_balance": "8.2 GB"
+    },
+    {
+      "subscriber_id": "MP10003",
+      "name": "Lerato Nkosi",
+      "msisdn": "0840003003",
+      "id_number": "9503035009082",
+      "plan": "Prepaid",
+      "data_balance": null
+    }
+  ]
+}
