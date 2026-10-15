@@ -1,5 +1,7 @@
 {
   "statusCode": 200,
+  "dataset_version": "2.0.0",
+  "environment": "workshop_mock",
   "data": [
     {
       "subscriber_id": "MP10001",
@@ -7,7 +9,20 @@
       "msisdn": "0820001001",
       "id_number": "9001015009087",
       "plan": "Prepaid",
-      "data_balance": "1.5 GB"
+      "data_balance": "1.5 GB",
+      "account_status": "Active",
+      "contract_end_date": null,
+      "billing_account_id": null,
+      "voice_minutes_remaining": 45,
+      "sms_remaining": 20,
+      "active_bundle_ids": [
+        "BND001"
+      ],
+      "sim_id": "SIM10001",
+      "sim_status": "Active",
+      "home_area": "Umhlanga",
+      "billing_summary": null,
+      "subscriptions": []
     },
     {
       "subscriber_id": "MP10002",
@@ -15,7 +30,41 @@
       "msisdn": "0830002002",
       "id_number": "9202025009081",
       "plan": "Postpaid",
-      "data_balance": "8.2 GB"
+      "data_balance": "8.2 GB",
+      "account_status": "Active",
+      "contract_end_date": "2027-06-30",
+      "billing_account_id": "BILL2002",
+      "voice_minutes_remaining": 320,
+      "sms_remaining": 100,
+      "active_bundle_ids": [
+        "BND003"
+      ],
+      "sim_id": "SIM10002",
+      "sim_status": "Active",
+      "home_area": "Durban Central",
+      "billing_summary": {
+        "period": "2026-09",
+        "total_due_zar": 649.0,
+        "due_date": "2026-10-25",
+        "payment_status": "Unpaid",
+        "charges": [
+          {
+            "description": "Monthly plan",
+            "amount_zar": 499.0
+          },
+          {
+            "description": "Out-of-bundle usage",
+            "amount_zar": 150.0
+          }
+        ]
+      },
+      "subscriptions": [
+        {
+          "service": "Streaming add-on",
+          "status": "Active",
+          "monthly_fee_zar": 49.0
+        }
+      ]
     },
     {
       "subscriber_id": "MP10003",
@@ -23,7 +72,205 @@
       "msisdn": "0840003003",
       "id_number": "9503035009082",
       "plan": "Prepaid",
-      "data_balance": null
+      "data_balance": null,
+      "account_status": "Active",
+      "contract_end_date": null,
+      "billing_account_id": null,
+      "voice_minutes_remaining": 0,
+      "sms_remaining": 0,
+      "active_bundle_ids": [],
+      "sim_id": "SIM10003",
+      "sim_status": "Active",
+      "home_area": "Pinetown",
+      "billing_summary": null,
+      "subscriptions": []
     }
-  ]
+  ],
+  "bundles": [
+    {
+      "bundle_id": "BND001",
+      "name": "Daily 1 GB",
+      "type": "Data",
+      "data_gb": 1,
+      "price_zar": 29,
+      "validity_days": 1,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid",
+        "Postpaid"
+      ]
+    },
+    {
+      "bundle_id": "BND002",
+      "name": "Weekly 2 GB",
+      "type": "Data",
+      "data_gb": 2,
+      "price_zar": 69,
+      "validity_days": 7,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid",
+        "Postpaid"
+      ]
+    },
+    {
+      "bundle_id": "BND003",
+      "name": "Monthly 10 GB",
+      "type": "Data",
+      "data_gb": 10,
+      "price_zar": 199,
+      "validity_days": 30,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid",
+        "Postpaid"
+      ]
+    },
+    {
+      "bundle_id": "BND004",
+      "name": "Weekend 3 GB",
+      "type": "Data",
+      "data_gb": 3,
+      "price_zar": 59,
+      "validity_days": 2,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid"
+      ]
+    },
+    {
+      "bundle_id": "BND005",
+      "name": "Monthly Voice 100",
+      "type": "Voice",
+      "minutes": 100,
+      "price_zar": 79,
+      "validity_days": 30,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid",
+        "Postpaid"
+      ]
+    },
+    {
+      "bundle_id": "BND006",
+      "name": "Monthly SMS 100",
+      "type": "SMS",
+      "sms_count": 100,
+      "price_zar": 25,
+      "validity_days": 30,
+      "availability": "Available",
+      "eligible_plans": [
+        "Prepaid",
+        "Postpaid"
+      ]
+    }
+  ],
+  "network_status": [
+    {
+      "area": "Umhlanga",
+      "service": "Mobile Data",
+      "status": "Operational",
+      "incident_id": null,
+      "advice": "Continue device-level troubleshooting."
+    },
+    {
+      "area": "Durban Central",
+      "service": "Mobile Data",
+      "status": "Degraded",
+      "incident_id": "INC1001",
+      "advice": "A simulated service issue is being investigated; avoid repeating device troubleshooting unnecessarily."
+    },
+    {
+      "area": "Pinetown",
+      "service": "Mobile Data",
+      "status": "Operational",
+      "incident_id": null,
+      "advice": "Continue device-level troubleshooting."
+    },
+    {
+      "area": "KwaMashu",
+      "service": "Voice",
+      "status": "Outage",
+      "incident_id": "INC1002",
+      "advice": "A simulated voice outage is being investigated; offer escalation if needed."
+    }
+  ],
+  "sim_records": [
+    {
+      "sim_id": "SIM10001",
+      "subscriber_id": "MP10001",
+      "status": "Active",
+      "type": "Physical SIM",
+      "activation_status": "Activated"
+    },
+    {
+      "sim_id": "SIM10002",
+      "subscriber_id": "MP10002",
+      "status": "Active",
+      "type": "eSIM",
+      "activation_status": "Activated"
+    },
+    {
+      "sim_id": "SIM10003",
+      "subscriber_id": "MP10003",
+      "status": "Active",
+      "type": "Physical SIM",
+      "activation_status": "Activated"
+    }
+  ],
+  "service_requests": [
+    {
+      "request_id": "REQ1001",
+      "subscriber_id": "MP10002",
+      "category": "Billing enquiry",
+      "status": "Open",
+      "created_at": "2026-10-01",
+      "summary": "Customer requested clarification of out-of-bundle charge"
+    },
+    {
+      "request_id": "REQ1002",
+      "subscriber_id": "MP10003",
+      "category": "Data balance unavailable",
+      "status": "Pending investigation",
+      "created_at": "2026-10-03",
+      "summary": "Balance field is temporarily unavailable"
+    }
+  ],
+  "support_policies": {
+    "verification_required_for": [
+      "data_balance",
+      "subscriber_profile",
+      "billing_summary",
+      "contract_end_date",
+      "sim_status",
+      "service_request_status"
+    ],
+    "human_escalation_required_for": [
+      "contract_cancellation",
+      "billing_dispute_above_500_zar",
+      "number_port_in",
+      "lost_sim_replacement"
+    ],
+    "sensitive_actions_not_supported": [
+      "sim_swap",
+      "sim_replacement",
+      "contract_cancellation",
+      "payment",
+      "bundle_purchase",
+      "refund",
+      "subscription_cancellation"
+    ],
+    "default_escalation_route": "human_support",
+    "sim_switching_intents": [
+      "move_existing_number_to_new_sim",
+      "activate_new_sim",
+      "port_number_to_mobipulse",
+      "switch_device_or_esim"
+    ]
+  },
+  "metadata": {
+    "fictional_data": true,
+    "prices_and_network_status_are_examples": true,
+    "notes": "Training-only mock. GitHub raw file is public; never add real customer identifiers, personal information or credentials."
+  }
 }
